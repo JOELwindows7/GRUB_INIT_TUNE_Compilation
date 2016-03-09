@@ -1,0 +1,33 @@
+These are the list of the short tune when the Grub is loaded. you can do this by editing the etc/default/grub as root and activate GRUB_INIT_TUNE 
+variable underneath the script, and fill the song you like. after you done close and don't forget to upgrade-grub as root to generate the 
+configuration file.
+=================================================================================================================================================
+WARNING: Song shall not be too long, otherwise it will waste your time and keep blank screen until the song finished playing because the GRUB must 
+play the tune first at a time not while it's booting the Operating system!
+=================================================================================================================================================
+You can test these song without having to reboot using this:
+grub-playtune tempo freq dur [freq dur freq dur ...]
+make sure you've installed it. using the last post from this page: http://ubuntuforums.org/showthread.php?t=1739495
+that's the script you need to copy.
++++++++++++++++++++++++++++++
+1. make a new file called "grub-playtune"
+2. open the file
+3. paste your script you hand there.
+4. save
+5. make it executable (chmod +x grub-playtune) or (right click the file, properties, access right, tick the check box executable, close.)
+6. copy to usr/local/bin/grub-playtune as root
+7. run 'grub-playtune <any_song_you_want_to_test_bellow>
+8. enjoy!
++++++++++++++++++++++++++++++
+Limitation:
+- You cannot have a half duration, must a raw number otherwise it won't work all
+------------------------------------------------------------------------------------------------------------------------------------------------
++++++++++++++++++++++++++++++++++++++++++++++++SONG LIST+++++++++++++++++++++++++++++++++++++++++++++++++++++
+Song_title: tempo freq dur [freq dur freq dur ...]
+Guruku Tersayang: 202 493 1 391 1 293 1 493 1 523 1 391 1 329 1 0 1 293 1 369 1 440 1 523 1 523 1 493 1 493 1 0 1 493 1 391 1 293 1 493 1 523 1 391 1 329 1 0 1 293 1 0 1 369 1 0 1 391 2
+Appregio A: 480 220 1 277 1 330 1 440 1 185 1 220 1 277 1 370 1 294 1 370 1 440 1 587 1 330 1 415 1 494 1 659 1
+Bluetooth Headset start: 320 220 1 277 1 440 1 544 1
+Bluetooth Headset stop!: 320 554 1 440 1 311 1 220 1
+Bluetooth Headset Beep!: 320 493 1
+Ultrasonic : 100 20000 5
+Infrasonic : 100 20 5
